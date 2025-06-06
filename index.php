@@ -12,7 +12,6 @@ include 'db.php';
 </head>
 <body>
     <header>
-<<<<<<< HEAD
     <h1>Location de Matériel Informatique</h1>
     <div class="header-buttons">
         <?php if (isset($_SESSION['user_id'])): ?>
