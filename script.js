@@ -1,25 +1,25 @@
 function togglePassword() {
-    const mdp = document.getElementById("mdp");
-    const mdp2 = document.getElementById("mdp2");
-    const type = mdp.type === "password" ? "text" : "password";
-    mdp.type = type;
-    if (mdp2) mdp2.type = type;
+    const pwd = document.getElementById("mdp");
+    pwd.type = (pwd.type === "password") ? "text" : "password";
+
+    const pwd2 = document.getElementById("mdp2");
+    if (pwd2) {
+        pwd2.type = (pwd2.type === "password") ? "text" : "password";
+    }
 }
 
 function switchForm() {
     const title = document.getElementById("formTitle");
     const action = document.getElementById("formAction");
-    const confirmPassword = document.getElementById("confirmPassword");
-    const button = document.querySelector("form input[type='submit']");
+    const confirmDiv = document.getElementById("confirmPassword");
+
     if (action.value === "login") {
-        action.value = "register";
         title.textContent = "Inscription";
-        confirmPassword.style.display = "block";
-        button.value = "S'inscrire";
+        action.value = "register";
+        confirmDiv.style.display = "block";
     } else {
-        action.value = "login";
         title.textContent = "Connexion";
-        confirmPassword.style.display = "none";
-        button.value = "Se connecter";
+        action.value = "login";
+        confirmDiv.style.display = "none";
     }
 }

@@ -1,23 +1,50 @@
-<?php include 'db.php'; session_start(); ?>
+<?php
+session_start();
+if (isset($_SESSION['user_id'])) {
+    header("Location: index.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Connexion / Inscription</title>
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
+
+<div class="form-container">
     <h2 id="formTitle">Connexion</h2>
-    <form method="POST" action="auth.php">
+
+    <form id="authForm" method="POST" action="auth.php">
         <input type="hidden" name="action" value="login" id="formAction">
-        <input type="email" name="mail" placeholder="Mail" required pattern=".+@ecoles-epsi\.net"><br>
-        <input type="password" name="mdp" id="mdp" placeholder="Mot de passe" required>
-        <input type="checkbox" onclick="togglePassword()"> Voir le mot de passe<br>
-        <div id="confirmPassword" style="display:none;">
-            <input type="password" name="mdp2" id="mdp2" placeholder="Confirmer le mot de passe"><br>
+
+        <label for="mail">Email :</label>
+        <input type="email" name="mail" required>
+
+        <label for="mdp">Mot de passe :</label>
+        <input type="password" name="mdp" id="mdp" required>
+
+        <div id="confirmPassword" style="display: none;">
+            <label for="mdp2">Confirmer le mot de passe :</label>
+            <input type="password" name="confirm" id="mdp2">
         </div>
-        <input type="submit" value="Valider">
+
+        <label style="text-align: left;">
+            <input type="checkbox" id="showPwd" onclick="togglePassword()"> Afficher les mots de passe
+        </label>
+
+        <button type="submit" class="btn full" id="submitBtn">Connexion</button>
     </form>
-    <button onclick="switchForm()">Changer en inscription</button>
+
+    <p style="margin-top: 20px;">
+        <span id="switchText">Pas encore de compte ?</span>
+        <a href="#" onclick="switchForm()">S’inscrire</a>
+    </p>
+</div>
+
+<script src="scrypt.js"></script>
 </body>
 </html>
