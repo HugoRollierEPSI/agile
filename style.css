@@ -46,6 +46,115 @@ header h1 {
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+<<<<<<< HEAD
+}
+
+.available {
+    background-color: #d3f9d8;
+}
+
+.unavailable {
+    background-color: #f8d7da;
+}
+
+.box h2 {
+    border-bottom: 2px solid #aaa;
+    padding-bottom: 10px;
+}
+
+.box p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Formulaire de connexion/inscription */
+.form-container {
+    max-width: 450px;
+    margin: 60px auto;
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 86, 145, 0.15);
+    text-align: center;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.form-container h2 {
+    margin-bottom: 25px;
+    color: #005691;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container label {
+    margin-bottom: 6px;
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-container input[type="email"],
+.form-container input[type="password"] {
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-container input:focus {
+    border-color: #005691;
+    outline: none;
+}
+
+.btn.full {
+    width: 100%;
+    background-color: #ffb703;
+    color: #000;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn.full:hover {
+    background-color: #ffa200;
+}
+
+.btn.secondary {
+    margin-top: 15px;
+    background-color: #e4e4e4;
+    color: #333;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn.secondary:hover {
+    background-color: #d2d2d2;
+}
+
+.form-container input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+=======
+>>>>>>> 203f44517fa04d9c16fad29264ff86fcffc2f28e
 }
 
 .available {

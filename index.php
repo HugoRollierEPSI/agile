@@ -12,6 +12,7 @@ include 'db.php';
 </head>
 <body>
     <header>
+<<<<<<< HEAD
     <h1>Location de Matériel Informatique</h1>
     <div class="header-buttons">
         <?php if (isset($_SESSION['user_id'])): ?>
@@ -28,6 +29,15 @@ include 'db.php';
     <div class="container">
         <div class="box available">
             <h2>Matériel Disponible</h2>
+=======
+        <h1>Location de MatÃ©riel Informatique</h1>
+        <a href="login.php" class="btn">Connexion</a>
+    </header>
+
+    <div class="container">
+        <div class="box available">
+            <h2>Disponible</h2>
+>>>>>>> 203f44517fa04d9c16fad29264ff86fcffc2f28e
             <?php
             $stmt = $pdo->query("SELECT libelle FROM materielle WHERE estDisponible = 1");
             foreach ($stmt as $row) {
@@ -35,9 +45,14 @@ include 'db.php';
             }
             ?>
         </div>
+<<<<<<< HEAD
 
         <div class="box unavailable">
             <h2>Matériel Indisponible</h2>
+=======
+        <div class="box unavailable">
+            <h2>Indisponible</h2>
+>>>>>>> 203f44517fa04d9c16fad29264ff86fcffc2f28e
             <?php
             $stmt = $pdo->query("SELECT libelle FROM materielle WHERE estDisponible = 0");
             foreach ($stmt as $row) {
